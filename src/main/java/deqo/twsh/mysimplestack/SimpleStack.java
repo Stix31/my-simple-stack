@@ -11,7 +11,7 @@ public class SimpleStack implements SimpleStackInterface {
     private List<Item> listItem = new ArrayList<>();
 
     public boolean isEmpty() {
-        return false;
+        return true;
     }
 
     @Override
