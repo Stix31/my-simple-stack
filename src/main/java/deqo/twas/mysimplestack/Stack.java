@@ -30,9 +30,8 @@ public class Stack implements SimpleStack {
         try {
             return stack.peek();
         } catch (Exception e) {
-            System.out.println("No item");
+            throw new EmptyStackException();
         }
-        return null;
     }
 
     @Override
@@ -40,8 +39,7 @@ public class Stack implements SimpleStack {
         try {
             return stack.pop();
         } catch (Exception e) {
-            System.out.println("No item");
+            throw new EmptyStackException();
         }
-        return null;
     }
 }

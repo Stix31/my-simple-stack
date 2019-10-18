@@ -2,6 +2,9 @@ package deqo.twas.mysimplestack;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
+
+import java.util.EmptyStackException;
 
 import static org.junit.Assert.*;
 
@@ -56,7 +59,7 @@ public class StackTest {
         assertEquals(30, stack.pop().getValue());
     }
 
-    @Test
+    @Test(expected = EmptyStackException.class)
     public void peek() {
         //Given
         //empty stack
@@ -65,9 +68,16 @@ public class StackTest {
         stack.push(item20);
         //Then
         assertEquals(20, stack.peek().getValue());
+
+        //Given
+        stack = new Stack();
+        //When
+        //stack empty;
+        //Then
+        stack.peek();
     }
 
-    @Test
+    @Test(expected = EmptyStackException.class)
     public void pop() {
         //Given
         //empty stack
@@ -75,5 +85,12 @@ public class StackTest {
         stack.push(item40);
         //Then
         assertEquals(40, stack.pop().getValue());
+
+        //Given
+        stack = new Stack();
+        //When
+        //stack empty;
+        //Then
+        stack.pop();
     }
 }
