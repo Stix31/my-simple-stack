@@ -11,7 +11,4 @@ public class Item {
     public void setValue(int value) {
         this.value = value;
     }
-
-
-
 }

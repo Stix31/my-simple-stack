@@ -2,7 +2,6 @@ package deqo.twas.mysimplestack;
 
 import org.junit.Before;
 import org.junit.Test;
-import sun.java2d.pipe.SpanShapeRenderer;
 
 import static org.junit.Assert.*;
 
@@ -13,6 +12,7 @@ public class StackTest {
     private Item item20;
     private Item item30;
     private Item item40;
+
     @Before
     public void setup() {
         stack = new Stack();
@@ -33,7 +33,7 @@ public class StackTest {
         //When
         stack = new Stack();
         //Then
-        assertEquals(true, stack.isEmpty());
+        assertTrue(stack.isEmpty());
     }
 
     @Test

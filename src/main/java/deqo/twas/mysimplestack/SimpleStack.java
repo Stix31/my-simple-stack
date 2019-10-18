@@ -4,14 +4,14 @@ import java.util.EmptyStackException;
 
 public interface SimpleStack {
 
-    public boolean isEmpty();
+    boolean isEmpty();
 
-    public int getSize();
+    int getSize();
 
-    public void push (Item item);
+    void push (Item item);
 
-    public Item peek () throws  EmptyStackException;
+    Item peek () throws  EmptyStackException;
 
-    public Item pop() throws EmptyStackException;
+    Item pop() throws EmptyStackException;
 
 }

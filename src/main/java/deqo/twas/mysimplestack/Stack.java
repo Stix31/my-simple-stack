@@ -28,7 +28,7 @@ public class Stack implements SimpleStack {
     @Override
     public Item peek() throws EmptyStackException {
         try {
-            return (Item) stack.peek();
+            return stack.peek();
         } catch (Exception e) {
             System.out.println("No item");
         }
@@ -38,7 +38,7 @@ public class Stack implements SimpleStack {
     @Override
     public Item pop() throws EmptyStackException {
         try {
-            return (Item) stack.pop();
+            return stack.pop();
         } catch (Exception e) {
             System.out.println("No item");
         }
