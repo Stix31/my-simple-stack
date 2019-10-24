@@ -8,30 +8,35 @@ import java.util.EmptyStackException;
 public interface SimpleStack {
 
     /**
-     * Is stack empty
-     * @return
+     * Is stack empty.
+     * @return boolean.
      */
     boolean isEmpty();
 
     /**
      * Get size of stack.
-     * @return
+     * @return int.
      */
     int getSize();
 
     /**
      * Push item.
-     * @param item
+     * @param item an Item
      */
     void push (Item item);
 
     /**
-     * Get
-     * @return
-     * @throws EmptyStackException
+     * Get the first element without pop it.
+     * @return Item
+     * @throws EmptyStackException if stack empty.
      */
     Item peek () throws  EmptyStackException;
 
+    /**
+     * Get the first element and pop it.
+     * @return Item
+     * @throws EmptyStackException if stack empty.
+     */
     Item pop() throws EmptyStackException;
 
 }
